@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:health_app_3/pages/forgotpassword.dart';
+import 'package:health_app_3/pages/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -110,7 +112,11 @@ class _LoginPageState extends State<LoginPage> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
-                        // Add forgot password functionality
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ModernForgotPasswordPage()),
+                        );
                       },
                       child: const Text(
                         'Forgot Password?',
@@ -158,6 +164,11 @@ class _LoginPageState extends State<LoginPage> {
                       GestureDetector(
                         onTap: () {
                           // Add navigation to sign up page
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterPage()),
+                          );
                         },
                         child: const Text(
                           'Sign Up',
